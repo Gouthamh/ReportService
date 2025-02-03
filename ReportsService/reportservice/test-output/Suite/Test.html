@@ -1,0 +1,1301 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>72/3/11</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Sep 12 15:20:40 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>1981 seconds (1981146 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='reportservice.Test001.Test2()'><b>Test2</b><br>Test class: reportservice.Test001</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at reportservice.Test001.Test2(Test001.java:21)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace873546358", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace873546358'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at reportservice.Test001.Test2(Test001.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>reportservice.Test001@2892dae4</td></tr>
+<tr>
+<td title='reportservice.FileName.test005()'><b>test005</b><br>Test class: reportservice.FileName</td>
+<td><div><pre>org.testng.TestNGException: 
+Method public static void reportservice.FileName.test005(java.lang.String,java.lang.String) requires a @DataProvider named : password
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1933965693", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1933965693'><pre>org.testng.TestNGException: 
+Method public static void reportservice.FileName.test005(java.lang.String,java.lang.String) requires a @DataProvider named : password
+	at org.testng.internal.Parameters.findDataProvider(Parameters.java:526)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:763)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:911)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.Test001.Test1()'><b>Test1</b><br>Test class: reportservice.Test001</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1357174989", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1357174989'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>reportservice.Test001@2892dae4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":false,"userPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>3</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"CSV","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":true}, mongotemplate</td>
+<td></td>
+<td>10</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":true,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>12</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":true}, template</td>
+<td></td>
+<td>12</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"ownerPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>6</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"HTML","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true}}, mongotemplate</td>
+<td></td>
+<td>3</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":false,"ownerPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>11</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"nameOfAfile":"fileNameUpdated"}, template_fileNameUpdated</td>
+<td></td>
+<td>5</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"CSV","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"}}, template</td>
+<td></td>
+<td>15</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":false,"userPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>4</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"onlyvalues","attachmentType":"HTML","parameters":{"values":"dfd"},"nameOfAfile":"FileName"}, onlyvalues_FileName</td>
+<td></td>
+<td>3</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>4</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"HTML","parameters":{"values":"dfd"}}, onlyvalues</td>
+<td></td>
+<td>4</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"mongotemplate_fileName","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"nameOfAfile":"sdsafd"}, mongotemplate_fileName_sdsafd</td>
+<td></td>
+<td>3</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"DemoMongo_fileName","attachmentType":"PDF","parameters":{},"nameOfAfile":"updatedFileName"}, DemoMongo_fileName_updatedFileName</td>
+<td></td>
+<td>8</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":true,"userPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>12</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"HTML","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":true}, mongotemplate</td>
+<td></td>
+<td>11</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"}}, onlyvalues</td>
+<td></td>
+<td>4</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":true,"ownerPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>12</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"}}, template</td>
+<td></td>
+<td>6</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"CSV","parameters":{"values":"dfd"}}, onlyvalues</td>
+<td></td>
+<td>4</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":true}, onlyvalues</td>
+<td></td>
+<td>12</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":false,"ownerPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>20</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":true,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>12</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>5</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":true,"userPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>11</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true}}, mongotemplate</td>
+<td></td>
+<td>3</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"userPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>5</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"onlyvalues","attachmentType":"CSV","parameters":{"values":"dfd"},"nameOfAfile":"FileName"}, onlyvalues_FileName</td>
+<td></td>
+<td>4</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":true,"ownerPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>10</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":false,"userPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>19</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":true,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>10</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"DemoMongo_fileName","attachmentType":"HTML","parameters":{},"nameOfAfile":"updatedFileName"}, DemoMongo_fileName_updatedFileName</td>
+<td></td>
+<td>3</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>6</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"userPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>5</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"nameOfAfile":"FileName"}, onlyvalues_FileName</td>
+<td></td>
+<td>4</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"CSV","parameters":{}}, DemoMongo</td>
+<td></td>
+<td>3</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":true}, mongotemplate</td>
+<td></td>
+<td>12</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"HTML","parameters":{"values":"dfd"},"zip":true}, onlyvalues</td>
+<td></td>
+<td>15</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":true,"ownerPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>12</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":false,"userPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>4</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":true,"userPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>10</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":false,"userPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>4</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":true,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>12</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":false,"ownerPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>5</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>5</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"mongotemplate_fileName","attachmentType":"HTML","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"nameOfAfile":"sdsafd"}, mongotemplate_fileName_sdsafd</td>
+<td></td>
+<td>3</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"HTML","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"}}, template</td>
+<td></td>
+<td>57</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":false,"ownerPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>9</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"ownerPassword":"9;`da3Lnb2=,"}, template</td>
+<td></td>
+<td>10</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":false,"userPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>4</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"CSV","parameters":{"values":"dfd"},"zip":true}, onlyvalues</td>
+<td></td>
+<td>11</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"template","attachmentType":"CSV","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"nameOfAfile":"fileNameUpdated"}, template_fileNameUpdated</td>
+<td></td>
+<td>5</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>4</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"mongotemplate_fileName","attachmentType":"CSV","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"nameOfAfile":"sdsafd"}, mongotemplate_fileName_sdsafd</td>
+<td></td>
+<td>3</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"CSV","parameters":{},"zip":true}, DemoMongo</td>
+<td></td>
+<td>12</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":true}, DemoMongo</td>
+<td></td>
+<td>12</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":false,"ownerPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>4</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{}}, DemoMongo</td>
+<td></td>
+<td>14</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"HTML","parameters":{}}, DemoMongo</td>
+<td></td>
+<td>5</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"template","attachmentType":"HTML","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"nameOfAfile":"fileNameUpdated"}, template_fileNameUpdated</td>
+<td></td>
+<td>5</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":false,"ownerPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>3</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":true,"userPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>12</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td></td>
+<td>5</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>4</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.FileName.test004()'><b>test004</b><br>Test class: reportservice.FileName<br>Parameters: {"templateName":"DemoMongo_fileName","attachmentType":"CSV","parameters":{},"nameOfAfile":"updatedFileName"}, DemoMongo_fileName_updatedFileName</td>
+<td></td>
+<td>4</td>
+<td>reportservice.FileName@37858383</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"DemoMongo","attachmentType":"HTML","parameters":{},"zip":true}, DemoMongo</td>
+<td></td>
+<td>17</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.Password.test005()'><b>test005</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"onlyvalues","attachmentType":"PDF","parameters":{"values":"dfd"},"zip":true,"ownerPassword":"9;`da3Lnb2=,"}, onlyvalues</td>
+<td></td>
+<td>11</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"mongotemplate","attachmentType":"PDF","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, mongotemplate</td>
+<td></td>
+<td>3</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"HTML","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":true}, template</td>
+<td></td>
+<td>12</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"mongotemplate","attachmentType":"CSV","parameters":{"date":"08/08/2024","dateandtime":"08/08/2024 12:00:00 AM","interger":3456,"restURL":true}}, mongotemplate</td>
+<td></td>
+<td>3</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test002()'><b>test002</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"CSV","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":true}, template</td>
+<td></td>
+<td>11</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='reportservice.Test001.Test1()'><b>Test1</b><br>Test class: reportservice.Test001</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1519656884", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1519656884'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>reportservice.Test001@2892dae4</td></tr>
+<tr>
+<td title='reportservice.Test001.Test1()'><b>Test1</b><br>Test class: reportservice.Test001</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1208417271", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1208417271'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>reportservice.Test001@2892dae4</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;504&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.Password.test004(Password.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1467981309", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1467981309'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;504&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.Password.test004(Password.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>60</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Password.test004()'><b>test004</b><br>Test class: reportservice.Password<br>Parameters: {"templateName":"DemoMongo","attachmentType":"PDF","parameters":{},"zip":false,"ownerPassword":"9;`da3Lnb2=,","userPassword":"9;`da3Lnb2=,"}, DemoMongo</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;502&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.Password.test004(Password.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2123309997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2123309997'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;502&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.Password.test004(Password.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3</td>
+<td>reportservice.Password@40cb8df7</td></tr>
+<tr>
+<td title='reportservice.Test001.Test1()'><b>Test1</b><br>Test class: reportservice.Test001</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1781893382", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1781893382'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>reportservice.Test001@2892dae4</td></tr>
+<tr>
+<td title='reportservice.Test001.Test1()'><b>Test1</b><br>Test class: reportservice.Test001</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace576066578", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace576066578'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1067)
+	at org.testng.Assert.assertEquals(Assert.java:1031)
+	at org.testng.Assert.assertEquals(Assert.java:1077)
+	at reportservice.Test001.Test1(Test001.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>reportservice.Test001@2892dae4</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"}}, template</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;502&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test001(test1.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1811235424", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1811235424'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;502&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test001(test1.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"userPassword":"9;`da3Lnb2=,"}, template</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;504&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test003(test1.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace811986896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace811986896'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;504&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test003(test1.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>60</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"userPassword":"9;`da3Lnb2=,"}, template</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test003(test1.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace401132274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace401132274'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test003(test1.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>50</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test003()'><b>test003</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"},"zip":false,"userPassword":"9;`da3Lnb2=,"}, template</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;502&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test003(test1.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace196316233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace196316233'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;502&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test003(test1.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:248)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:62)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+<tr>
+<td title='reportservice.test1.test001()'><b>test001</b><br>Test class: reportservice.test1<br>Parameters: {"templateName":"template","attachmentType":"PDF","parameters":{"restURL":"https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report","value":100,"testedqq":"restURL, value, testedqq are required parameters to generate repor"}}, template</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test001(test1.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace984302294", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace984302294'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.tecnotree.automatiom.Methods.Method.assertIt(Method.java:160)
+	at reportservice.test1.test001(test1.java:40)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>58</td>
+<td>reportservice.test1@13b13b5d</td></tr>
+</table><p>
+</body>
+</html>

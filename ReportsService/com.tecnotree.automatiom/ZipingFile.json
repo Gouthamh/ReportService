@@ -1,0 +1,109 @@
+{
+    "dataSet": [
+        {
+            "templateName": "DemoMongo",
+            "attachmentType": "CSV",
+            "parameters": {},
+            "zip": true
+        },
+        {
+            "templateName": "DemoMongo",
+            "attachmentType": "HTML",
+            "parameters": {},
+            "zip": true
+        },
+        {
+            "templateName": "DemoMongo",
+            "attachmentType": "PDF",
+            "parameters": {},
+            "zip": true
+        },
+        {
+            "templateName": "template",
+            "attachmentType": "CSV",
+            "parameters": {
+                "restURL": "https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report",
+                "value": 100,
+                "testedqq": "restURL, value, testedqq are required parameters to generate repor"
+            },
+            "zip": true
+        },
+        {
+            "templateName": "template",
+            "attachmentType": "HTML",
+            "parameters": {
+                "restURL": "https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report",
+                "value": 100,
+                "testedqq": "restURL, value, testedqq are required parameters to generate repor"
+            },
+            "zip": true
+        },
+        {
+            "templateName": "template",
+            "attachmentType": "PDF",
+            "parameters": {
+                "restURL": "https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report",
+                "value": 100,
+                "testedqq": "restURL, value, testedqq are required parameters to generate repor"
+            },
+            "zip": true
+        },
+        {
+            "templateName": "mongotemplate",
+            "attachmentType": "CSV",
+            "parameters": {
+                "date": "08/08/2024",
+                "dateandtime": "08/08/2024 12:00:00 AM",
+                "interger": 3456,
+                "restURL": true
+            },
+            "zip": true
+        },
+        {
+            "templateName": "mongotemplate",
+            "attachmentType": "PDF",
+            "parameters": {
+                "date": "08/08/2024",
+                "dateandtime": "08/08/2024 12:00:00 AM",
+                "interger": 3456,
+                "restURL": true
+            },
+            "zip": true
+        },
+        {
+            "templateName": "mongotemplate",
+            "attachmentType": "HTML",
+            "parameters": {
+                "date": "08/08/2024",
+                "dateandtime": "08/08/2024 12:00:00 AM",
+                "interger": 3456,
+                "restURL": true
+            },
+            "zip": true
+        },
+        {
+            "templateName": "onlyvalues",
+            "attachmentType": "CSV",
+            "parameters": {
+                "values": "dfd"
+            },
+            "zip": true
+        },
+        {
+            "templateName": "onlyvalues",
+            "attachmentType": "PDF",
+            "parameters": {
+                "values": "dfd"
+            },
+            "zip": true
+        },
+        {
+            "templateName": "onlyvalues",
+            "attachmentType": "HTML",
+            "parameters": {
+                "values": "dfd"
+            },
+            "zip": true
+        }
+    ]
+}

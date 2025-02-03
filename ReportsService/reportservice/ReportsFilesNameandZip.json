@@ -1,0 +1,124 @@
+{
+	"dataSet": [
+		{
+			"templateName": "DemoMongo_fileName",
+			"attachmentType": "PDF",
+			"parameters": {
+			},
+			"nameOfAfile": "updatedFileName",
+			"zip": true
+		},
+		{
+			"templateName": "DemoMongo_fileName",
+			"attachmentType": "HTML",
+			"parameters": {
+			},
+			"nameOfAfile": "updatedFileName",
+			"zip": true
+		},
+		{
+			"templateName": "DemoMongo_fileName",
+			"attachmentType": "CSV",
+			"parameters": {
+			},
+			"nameOfAfile": "updatedFileName",
+			"zip": true
+		},
+		{
+			"templateName": "template",
+			"attachmentType": "CSV",
+			"parameters": {
+				"restURL": "https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report",
+				"value": 100,
+				"testedqq": "restURL, value, testedqq are required parameters to generate repor"
+			},
+			"password": "fileNameUpdated",
+			"zip": true
+		},
+		{
+			"templateName": "template",
+			"attachmentType": "HTML",
+			"parameters": {
+				"restURL": "https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report",
+				"value": 100,
+				"testedqq": "restURL, value, testedqq are required parameters to generate repor"
+			},
+			"password": "fileNameUpdated",
+			"zip": true
+		},
+		{
+			"templateName": "template",
+			"attachmentType": "PDF",
+			"parameters": {
+				"restURL": "https://dap.pe-lab3.bdc-rancher.tecnotree.com/dap-reports/template-to-report",
+				"value": 100,
+				"testedqq": "restURL, value, testedqq are required parameters to generate repor"
+			},
+			"password": "fileNameUpdated",
+			"zip": true
+		},
+		{
+			"templateName": "mongotemplate_fileName",
+			"attachmentType": "CSV",
+			"parameters": {
+				"date": "08/08/2024",
+				"dateandtime": "08/08/2024 12:00:00 AM",
+				"interger": 3456,
+				"restURL": true
+			},
+			"FileName": "sdsafd",
+			"zip": true
+		},
+		{
+			"templateName": "mongotemplate_fileName",
+			"attachmentType": "HTML",
+			"parameters": {
+				"date": "08/08/2024",
+				"dateandtime": "08/08/2024 12:00:00 AM",
+				"interger": 3456,
+				"restURL": true
+			},
+			"FileName": "sdsafd",
+			"zip": true
+		},
+		{
+			"templateName": "mongotemplate_fileName",
+			"attachmentType": "PDF",
+			"parameters": {
+				"date": "08/08/2024",
+				"dateandtime": "08/08/2024 12:00:00 AM",
+				"interger": 3456,
+				"restURL": true
+			},
+			"FileName": "sdsafd",
+			"zip": true
+		},
+		{
+			"templateName": "onlyvalues",
+			"attachmentType": "CSV",
+			"parameters": {
+				"values": "dfd"
+			},
+			"Name": "FileName",
+			"zip": true
+		},
+		{
+			"templateName": "onlyvalues",
+			"attachmentType": "PDF",
+			"parameters": {
+				"values": "dfd"
+			},
+			"Name": "FileName",
+			"zip": true
+		},
+		{
+			"templateName": "onlyvalues",
+			"attachmentType": "HTML",
+			"parameters": {
+				"values": "dfd"
+			},
+			"Name": "FileName",
+			"zip": true
+		}
+	]
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes" thread-count="3">
+  <test name="Test1_Test2_Test3" >
+    <classes>
+      <class name="com.tecnotree.automatiom.File.Upload.Service.Test_002_port_22_172">
+		  <methods>
+			  <include name="JPEG"></include>
+		  </methods>
+	  </class>
+    </classes>
+  </test> 
+  <!-- Test -->
+</suite> <!-- Suite -->

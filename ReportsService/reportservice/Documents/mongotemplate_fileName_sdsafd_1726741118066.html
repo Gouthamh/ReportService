@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Report</title>
+		<style>
+			body {
+				margin: 0pt;
+				padding: 0pt;
+			}
+			.arjs-reportPage {
+				page-break-after: always;
+			}
+			@page {
+				margin: 0mm;
+				size: 8.5in 11in;
+			}
+
+		</style>
+		<style>.arjs-reportPage, .arjs-reportPage * {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+@media screen {
+	.arjs-hide-export {
+		visibility: hidden;
+	}
+}
+
+@media print {
+	.arjs-hide-paper {
+		visibility: hidden;
+	}
+}
+
+.arjs-reportPage {
+	background-color: white;
+	color: black;
+	font-family: Arial;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeSpeed;
+	text-decoration-skip-ink: none;
+}
+
+.arjs-canvasItem {
+	position: absolute;
+}
+.arjs-itemContent {
+	position: absolute;
+}
+.arjs-stack_vert {
+	display: flex;
+	flex-direction: column;
+}
+.arjs-stack_horz {
+	display: flex;
+	flex-direction: row;
+}
+.arjs-listItem {
+	position: relative;
+}
+.arjs-section {
+	position: relative;
+}
+.arjs-placeItem {
+	position: absolute;
+	z-index: inherit;
+}
+.arjs-tableItem {
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+.arjs-tableCell {
+	padding: 0;
+	vertical-align: top;
+}
+@-moz-document url-prefix() {
+	.arjs-tableCell {
+		 height: 100%;
+	 }
+}
+.arjs-cellContent {
+	position: relative;
+	overflow: hidden;
+}
+.arjs-cellContent > div {
+	min-height: 100%;
+	min-width: 100%;
+}
+.arjs-cbControl {
+	width: 12px;
+	height: 12px;
+	min-width: 12px;
+	min-height: 12px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.arjs-cbCommon {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+.arjs-cbTopLeft {
+	align-items: flex-start;
+	text-align: left;
+}
+
+.arjs-cbTopRight {
+	align-items: flex-end;
+	text-align: right;
+}
+
+.arjs-cbMiddleLeft {
+	flex-direction: row;
+	text-align: left;
+}
+
+.arjs-cbMiddleCenter {
+	flex-direction: row;
+	justify-content: center;
+}
+
+.arjs-cbMiddleRight {
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+.arjs-cbBottomLeft {
+	flex-direction: column-reverse;
+	align-items: flex-start;
+	text-align: left;
+}
+
+.arjs-cbBottomCenter {
+	flex-direction: column-reverse;
+}
+
+.arjs-cbBottomRight {
+	flex-direction: column-reverse;
+	align-items: flex-end;
+	text-align: right;
+}
+
+.arjs-cbTextCommon {
+	width: 100%;
+}
+.arjs-cbPadding {
+	padding-bottom: 0.75pt;
+}
+
+.arjs-cbTextTopLeft, .arjs-cbTextBottomLeft {
+	padding-left: 14px;
+}
+
+.arjs-cbTextTopRight, .arjs-cbTextBottomRight {
+	padding-right: 14px;
+}
+
+.arjs-cbTextMiddleLeft {
+	padding-left: 2px;
+	width: calc(100% - 2px);
+}
+
+.arjs-cbTextMiddleCenter{
+	position: absolute;
+}
+
+.arjs-cbTextMiddleRight {
+	padding-right: 2px;
+	width: calc(100% - 2px);
+}
+
+.arjs-textBoxItem {
+	display: flex;
+	position: absolute;
+	overflow: hidden;
+}
+
+.arjs-textBoxContent {
+	width: 100%;
+	max-height: 100%;
+	overflow: hidden;
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+	transform-origin: left top;
+}
+
+.arjs-hideOverflow {
+	overflow: hidden;
+}
+
+.arjs-action {
+	cursor: pointer;
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+}
+
+.arjs-action.arjs-control {
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.arjs-action.arjs-control.arjs-toggle-placeholder, /* ARJ-3744. Remove this class after drop IE support */
+.arjs-action.arjs-control.arjs-toggle-expanded,
+.arjs-action.arjs-control.arjs-toggle-collapsed {
+	min-width: 15px;
+	min-height: 15px;
+}
+
+.arjs-action.arjs-control.arjs-sort-placeholder, /* ARJ-3744. Remove this class after drop IE support */
+.arjs-action.arjs-control.arjs-sort-variant,
+.arjs-action.arjs-control.arjs-sort-ascending,
+.arjs-action.arjs-control.arjs-sort-descending {
+	min-width: 18px;
+	min-height: 18px;
+}
+
+.arjs-toggle-expanded {
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE5LDEzSDEzVjE5SDExVjEzSDVWMTFIMTFWNUgxM1YxMUgxOVYxM1oiIC8+PC9zdmc+");
+}
+
+.arjs-toggle-collapsed {
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE5LDEzSDVWMTFIMTlWMTNaIiAvPjwvc3ZnPg==");
+}
+
+/* ARJ-3744. Remove this class after drop IE support */
+.arjs-icon-placeholder {
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBoZWlnaHQ9IjI0IiB3aWR0aD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PC9zdmc+DQo=");
+}
+
+.arjs-sort-variant {
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLDEzVjExSDE4VjEzSDEwTTEwLDE5VjE3SDE0VjE5SDEwTTEwLDdWNUgyMlY3SDEwTTYsMTdIOC41TDUsMjAuNUwxLjUsMTdINFY3SDEuNUw1LDMuNUw4LjUsN0g2VjE3WiIgLz48L3N2Zz4=");
+}
+
+.arjs-sort-ascending {
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLDExVjEzSDE4VjExSDEwTTEwLDVWN0gxNFY1SDEwTTEwLDE3VjE5SDIyVjE3SDEwTTYsN0g4LjVMNSwzLjVMMS41LDdINFYyMEg2VjdaIiAvPjwvc3ZnPg==");
+}
+
+.arjs-sort-descending {
+	background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEwLDEzVjExSDE4VjEzSDEwTTEwLDE5VjE3SDE0VjE5SDEwTTEwLDdWNUgyMlY3SDEwTTYsMTdIOC41TDUsMjAuNUwxLjUsMTdINFY0SDZWMTdaIiAvPjwvc3ZnPg==");
+}
+
+.arjs-tocLevelLabel {
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+    white-space: pre-wrap;
+}
+
+.arjs-flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.arjs-barcode {
+	display: flex;
+}
+.arjs-barcode > div {
+	flex: 1;
+}
+
+.arjs-flex-textitem {
+	flex: 0 1 auto;
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+	pointer-events: none;
+}
+
+.arjs-flex-textfiller {
+	flex: 1 1 auto;
+	position: relative;
+	overflow: hidden;
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+	pointer-events: none;
+}
+
+.arjs-text-tab {
+	display: inline-block;
+	text-align: left;
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+	pointer-events: none;
+}
+
+.arjs-float-r {
+	float: right;
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+}
+
+.arjs-float-r-abs {
+	display: flex;
+	flex-direction: row-reverse;
+	position: absolute;
+	right: 0;
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+}
+
+.arjs-char-wrap {
+	overflow-wrap: break-word;
+	text-decoration-style: inherit;
+	text-decoration-line: inherit;
+}
+
+.arjs-bordersItem {
+	pointer-events: none;
+}
+
+.arjs-errorMessage {
+	font-size: 10pt;
+	color: Black;
+	padding: 2pt;
+}
+
+.arjs-inputField {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.arjs-inputFieldBase {
+	position: relative;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.arjs-fullSize {
+	width: 100%;
+	height: 100%;
+}
+
+.arjs-textRun {
+	overflow: hidden;
+}
+
+.arjs-textLine {
+	white-space: nowrap;
+	display: block;
+	text-indent: initial;
+}
+
+.arjs-textLine:last-child {
+	text-align-last: auto;
+}
+
+.arjs-textLine:first-child {
+	text-indent: inherit;
+}
+
+.arjs-richtext-list-item {
+	display: flex;
+	align-items: baseline;
+}
+
+.arjs-richtext-list-item__content {
+	flex-grow: 1;  /* let the list item content take all available space */
+}
+
+.arjs-richtext-list-item__marker {
+	display: flex;
+	justify-content: flex-end;
+	text-indent: 0;
+}
+
+.arjs-upright {
+	-webkit-text-combine: horizontal; /* Safari */
+	text-combine-upright: all;
+}
+
+.arjs-frozen-row {
+	position: sticky;
+}
+
+.arjs-frozen-cell {
+	position: sticky;
+	z-index: 2;
+}
+
+.arjs-cell-outline-borders {
+	border-color: transparent !important;
+	border-style: solid !important;
+}
+
+.arjs-cell-outline-borders > div > div {
+	position: absolute;
+}
+
+.arjs-cell-outline-borders > div {
+	width: 100%;
+	height: 100%;
+}
+
+.arjs-frozen-cell > div > div {
+	left: 0pt;
+	top: 0pt;
+}
+
+/* see node_modules/gc-dv/lib/gcdv.css */
+.gcdv-tooltip {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    max-width: 400px;
+    padding: 6px;
+    background-color: #ffffe5;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 6px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-sizing: border-box
+}
+</style>
+		<style>.arjs-x555E928F-rpt1TextBox9Style {color:Black;align-items:flex-start;text-decoration-line:none;text-justify:Auto;font-family:"Arial";font-size:10pt;font-style:normal;font-weight:normal;direction:LTR;word-wrap:break-word;word-break:normal;white-space:normal;padding:2pt;} .arjs-x555E928F-rpt1TextBox7Style {color:Black;align-items:flex-start;text-decoration-line:none;text-justify:Auto;font-family:"Arial";font-size:10pt;font-style:normal;font-weight:normal;direction:LTR;word-wrap:break-word;word-break:normal;white-space:normal;padding:2pt;} .arjs-x555E928F-rpt1TextBox8Style {color:Black;align-items:flex-start;text-decoration-line:none;text-justify:Auto;font-family:"Arial";font-size:10pt;font-style:normal;font-weight:normal;direction:LTR;word-wrap:break-word;word-break:normal;white-space:normal;padding:2pt;} .arjs-x555E928F-rpt1TextBox10Style {color:Black;align-items:flex-start;text-decoration-line:none;text-justify:Auto;font-family:"Arial";font-size:10pt;font-style:normal;font-weight:normal;direction:LTR;word-wrap:break-word;word-break:normal;white-space:normal;padding:2pt;}
+@font-face { font-family: "Arial"; font-style: normal; font-weight: 400; src: url("fonts/arial.ttf"); }
+@font-face { font-family: "Arial"; font-style: italic; font-weight: 400; src: url("fonts/ariali.ttf"); }
+@font-face { font-family: "Arial"; font-style: normal; font-weight: 700; src: url("fonts/arialbd.ttf"); }
+@font-face { font-family: "Arial"; font-style: italic; font-weight: 700; src: url("fonts/arialbi.ttf"); }</style>
+	</head>
+	<body>
+		<div class="arjs-reportPage" data-reportsectiondisplayname="ContinuousSection1" style="width: 8.5in; height: 11in; padding: 1in; position: relative;"><div style="width: 468pt; height: 648pt;"><div class="arjs-itemContent arjs-container arjs-section" style="width: 468pt; height: 648pt;"><div id="dc_1" class="arjs-itemContent arjs-textBoxItem arjs-x555E928F-rpt1TextBox8Style arjs-canvasItem" style="text-align: left; flex-direction: row; width: 162pt; height: 18.05pt; left: 0pt; top: 0pt; z-index: 4;"><div class="arjs-textBoxContent">08/08/2024 12:00:00 AM</div></div><div id="dc_3" class="arjs-itemContent arjs-textBoxItem arjs-x555E928F-rpt1TextBox9Style arjs-canvasItem" style="text-align: left; flex-direction: row; width: 72pt; height: 18.05pt; left: 180pt; top: 0pt; z-index: 1;"><div class="arjs-textBoxContent">True</div></div><div id="dc_4" class="arjs-itemContent arjs-textBoxItem arjs-x555E928F-rpt1TextBox7Style arjs-canvasItem" style="text-align: left; flex-direction: row; width: 72pt; height: 18.05pt; left: 378pt; top: 0pt; z-index: 3;"><div class="arjs-textBoxContent">08/08/2024</div></div><div id="dc_2" class="arjs-itemContent arjs-textBoxItem arjs-x555E928F-rpt1TextBox10Style arjs-canvasItem" style="text-align: right; flex-direction: row; width: 72pt; height: 18.05pt; left: 0pt; top: 35.85pt; z-index: 5;"><div class="arjs-textBoxContent">3456</div></div></div></div><style>.arjs-control { display: none !important; }</style></div>
+	</body>
+	<script>
+		function onActionClick(event) {
+			var action = event && event.target && event.target.dataset && event.target.dataset.action && JSON.parse(event.target.dataset.action);
+			if (action) {
+				switch (action.Type) {
+					case "hyperlink": window.open(action.Target, "_blank"); break;
+					case "bookmark": window.location.href = window.location.href.replace(window.location.hash, "") + "#" + action.Target; break;
+				}
+			}
+		}
+		document.addEventListener("click", onActionClick);
+	</script>
+	
+</html>

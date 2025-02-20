@@ -27,11 +27,9 @@ public interface InterfaceMethods {
 
 	public void assertIt(List<List<Object>> data);
 
-	public static void failTest(String expected, String present) {
-		throw new AssertionError("Does not contain the expected\t " + expected + "\n but had\t" + present);
-		}
+	public void failTest(String expected, String present);
 
-	public static void failTest(String message) {throw new AssertionError(message);}
+	public void failTest(String message);
 
 	public String extractString(String path);
 

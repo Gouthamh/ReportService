@@ -26,7 +26,7 @@ public class ReportService {
 
         JSONObject jsonObject = new JSONObject(data);
 
-        return jsonObject.toString(4);  
+        return jsonObject.toString();  
     }
     
     public static void main(String[] args) {

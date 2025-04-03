@@ -20,6 +20,7 @@ public class FormDataMultipleFile {
 		List<String> a = Fileupload.getFileList(FilePath);
 		for (String s : a) {
 			request.multiPart("files", new File(s));
+			
 		}
 
 		return request;
@@ -39,9 +40,6 @@ public class FormDataMultipleFile {
 				.spec(Specifiactions.responsespeci())
 				.extract()
 				.response();
-				
-		
-		
 				return response;
 
 		   
